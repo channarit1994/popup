@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	</head>
+	<body>
+		<div name="bannerDetected" id="bannerDetected"></div>
+		<script>
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const iataCode = urlParams.get('iataCode');
+			const puDay = urlParams.get('puDay');
+			const puMonth = urlParams.get('puMonth');
+			const puYear = urlParams.get('puYear');
+			const doDay = urlParams.get('doDay');
+			const doMonth = urlParams.get('doMonth');
+			const doYear = urlParams.get('doYear');
+
+			console.log(iataCode);
+			console.log(puDay);
+			console.log(puMonth);
+			console.log(puYear);
+			console.log(doDay);
+			console.log(doMonth);
+			console.log(doYear);
+			
+			if (iataCode == "CGK" || iataCode == "BOM")
+			{
+				document.getElementById('bannerDetected').innerHTML += '<p><center>';
+				document.getElementById('bannerDetected').innerHTML += '<img src="https://dej5dgk6v2ulk.cloudfront.net/Web/res/images/Baggage-525/Baggage-525-en.jpg" alt="" style="width:100%" />';
+				document.getElementById('bannerDetected').innerHTML += '</center></p>';
+			}
+		  </script>
+	</body>
+</html>
